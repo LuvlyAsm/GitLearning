@@ -24,7 +24,7 @@ git branch hello-world-images     // To create a branch
 git branch                                      // To view all the branches
 git checkout "branch-name"        //To switch between branches //Using the -b option on checkout will create a new branch, and move to it, if it does not exist
 git checkout -b "new-branch-name" // To create new branch from the current branch
-                                                            // For example, if you are in master branch and trying to use this command means, the new branch will be created as the base branch as master
+                                  // For example, if you are in master branch and trying to use this command means, the new branch will be created as the base branch as master
 
 Merge branch
 -------------------
@@ -58,10 +58,49 @@ cd folderName
 
 //Github
 
-Push Changes o cloud repo
----------------------------
+Push Changes to cloud repo
+--------------------------------------
 git remote add origin https://github.com/w3schools-test/hello-world.git //To specify the location
 git push --set-upstream origin master //To push the changes
+
+Git Pull from GitHub
+---------------------------
+1. By using GIT, we can pull the latest changes
+2. Pull is a combination of 2 comnmands
+    * fetch
+    * merge
+
+Fetch & Merge
+----------------------
+The git fetch command is used to update your local repository with changes from a remote repository. It retrieves new commits, branches, and tags from the remote 
+without merging them into your local branches. 
+This allows you to see what changes have been made in the remote repository before deciding to incorporate them into your own work.
+
+
+git fetch origin  			//Fetch the details
+git status         		                  // Will lisout how many commits made in the git repo
+git log origin/master   	                  // Will list out the logs
+git diff origin/master		                  // Will list out exact difference in the remote repo
+ 
+The git merge combines the current branch, with a specified branch.
+
+git merge origin/master	                  // it will merge the changes from your cloud repo to the current master repo
+git status				// To check the changes
+
+
+Git Pull
+----------
+It is combination of fetch and merge.
+Git pull will directly merge the changes with the current repo.
+
+git pull origin     			// Will merge the remote repo changes to your current change.
+
+Push changes to github
+----------------------------------
+1. Make changes to the local git File
+2. git commit -a -m "Updated the file"       // Committing local file changes 
+3. git status                                              // Checking the status
+4. git push origin                                      // Pushing the changes to the remote repo
 
 
 
