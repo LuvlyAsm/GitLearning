@@ -1,0 +1,64 @@
+git --version //To know the git version
+git status // Will give untracked files and message about the git repo and their files
+git status --short // Will give the short message about the status
+
+Git configuration(First time)
+--------------------------------------
+git config --global user.name "w3schools-test"
+git config --global user.email "test@w3schools.com"
+git init //Initialized empty Git repository in Z:/Git/.git/
+
+
+
+git add --all //add all the files in the current git
+git commit -m "message"  //commits the files
+git commit -a -m "message"   // Commit without staging using '-a' (usually not recommended)
+git log // will display all the logs
+
+git command -help   //See all the available options for the specific command(example git commit -help)
+git help --all               //See all possible commands
+
+Creating branch
+------------------------
+git branch hello-world-images     // To create a branch
+git branch                                      // To view all the branches
+git checkout "branch-name"        //To switch between branches //Using the -b option on checkout will create a new branch, and move to it, if it does not exist
+git checkout -b "new-branch-name" // To create new branch from the current branch
+                                                            // For example, if you are in master branch and trying to use this command means, the new branch will be created as the base branch as master
+
+Merge branch
+-------------------
+// Navigate to parent branch and try to merge the changes from child branch
+git checkout master //switching to master branch 
+git merge emergency-fix //Merging emergency-fix changes with master branch. emergency branch is created by the base branch of master.
+
+Deleting a branch
+------------------------
+// We can delete the unused/ unwanted branch
+git branch -d branch-name // git branch -d emergency-branch to delete the emergency-fix branch
+
+Merge Conflicts
+----------------------
+git merge --abort      // to abort the merge
+1. git checkout master
+2. git merge hello-world-images
+3.  It will give 
+Auto-merging FirstRepo/index.html
+CONFLICT (content): Merge conflict in FirstRepo/index.html
+Automatic merge failed; fix conflicts and then commit the result
+4. git status // to know the conflict and changes
+5. Go to editor like vscode
+6. Accept current change/Accept the incoming occurence/Accept both changes/compare changes  -> in the file, you can give based on priority
+7. git add --all //to accept the changes
+8. git commit -m "message" // to commit the changes to master branch
+
+//Create folder in the local
+mkdir folderName
+cd folderName
+
+//Github
+
+
+
+
+// for commit messages --https://www.conventionalcommits.org/en/v1.0.0/
